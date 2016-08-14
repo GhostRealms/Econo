@@ -1,7 +1,7 @@
 package net.ghostrealms.econo.command.type;
 
 import net.ghostrealms.econo.Econo;
-import net.ghostrealms.econo.command.SaneEconomyCommand;
+import net.ghostrealms.econo.command.EconoCommand;
 import net.ghostrealms.econo.command.exception.type.usage.NeedPlayerException;
 import net.ghostrealms.econo.economy.economable.Economable;
 import net.ghostrealms.econo.utils.MessageUtils;
@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
  *
  * TODO: Support for paying offline players.
  */
-public class PayCommand extends SaneEconomyCommand {
+public class PayCommand extends EconoCommand {
     @Override
     public String getPermission() {
         return "saneeconomy.pay";

@@ -14,7 +14,8 @@ import java.util.List;
  * Created by AppleDash on 6/14/2016.
  * Blackjack is still best pony.
  */
-public class EconomySaneEconomy implements Economy {
+
+public class EconomyEcono implements Economy {
     @Override
     public boolean isEnabled() {
         return Econo.getInstance().isEnabled();

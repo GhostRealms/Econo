@@ -1,7 +1,7 @@
 package net.ghostrealms.econo.command.type;
 
 import net.ghostrealms.econo.Econo;
-import net.ghostrealms.econo.command.SaneEconomyCommand;
+import net.ghostrealms.econo.command.EconoCommand;
 import net.ghostrealms.econo.command.exception.CommandException;
 import net.ghostrealms.econo.command.exception.type.usage.InvalidUsageException;
 import net.ghostrealms.econo.command.exception.type.usage.NeedPlayerException;
@@ -20,7 +20,7 @@ import org.bukkit.entity.Player;
  * Created by AppleDash on 6/13/2016.
  * Blackjack is still best pony.
  */
-public class EconomyAdminCommand extends SaneEconomyCommand {
+public class EconomyAdminCommand extends EconoCommand {
     @Override
     public String getPermission() {
         return "saneeconomy.ecoadmin";

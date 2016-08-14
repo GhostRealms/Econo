@@ -12,7 +12,8 @@ import org.bukkit.command.CommandSender;
  * Created by AppleDash on 6/13/2016.
  * Blackjack is still best pony.
  */
-public abstract class SaneEconomyCommand implements CommandExecutor {
+public abstract class EconoCommand implements CommandExecutor {
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         try {

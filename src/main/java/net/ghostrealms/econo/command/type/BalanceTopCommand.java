@@ -1,7 +1,7 @@
 package net.ghostrealms.econo.command.type;
 
 import net.ghostrealms.econo.Econo;
-import net.ghostrealms.econo.command.SaneEconomyCommand;
+import net.ghostrealms.econo.command.EconoCommand;
 import net.ghostrealms.econo.command.exception.CommandException;
 import net.ghostrealms.econo.command.exception.type.usage.TooManyArgumentsException;
 import net.ghostrealms.econo.utils.MessageUtils;
@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Created by AppleDash on 6/13/2016.
  * Blackjack is still best pony.
  */
-public class BalanceTopCommand extends SaneEconomyCommand {
+public class BalanceTopCommand extends EconoCommand {
     @Override
     public String getPermission() {
         return "saneeconomy.balancetop";

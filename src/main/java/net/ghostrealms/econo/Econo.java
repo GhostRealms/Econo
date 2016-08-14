@@ -2,8 +2,6 @@ package net.ghostrealms.econo;
 
 import com.google.common.base.Strings;
 import net.ghostrealms.econo.command.type.*;
-import net.ghostrealms.econo.updates.GithubVersionChecker;
-import net.ghostrealms.econo.command.SaneEconomyCommand;
 import net.ghostrealms.econo.economy.Currency;
 import net.ghostrealms.econo.economy.EconomyManager;
 import net.ghostrealms.econo.economy.backend.EconomyStorageBackend;
@@ -29,11 +27,11 @@ public class Econo extends JavaPlugin {
     private EconomyManager economyManager;
     private VaultHook vaultHook;
 
-    private static final Map<String, SaneEconomyCommand> COMMANDS = new HashMap<String, SaneEconomyCommand>() {{
+    private static final Map<String, net.ghostrealms.econo.command.EconoCommand> COMMANDS = new HashMap<String, net.ghostrealms.econo.command.EconoCommand>() {{
         put("balance", new BalanceCommand());
         put("ecoadmin", new EconomyAdminCommand());
         put("pay", new PayCommand());
-        put("saneeconomy", new SaneEcoCommand());
+        put("econo", new EconoCmd());
         put("balancetop", new BalanceTopCommand());
     }};
 
@@ -60,8 +58,6 @@ public class Econo extends JavaPlugin {
         } else {
             getLogger().info("Not hooking into Vault because it isn't loaded.");
         }
-
-        getServer().getScheduler().scheduleAsyncDelayedTask(this, GithubVersionChecker::checkUpdateAvailable);
 
         getServer().getScheduler().runTaskTimerAsynchronously(this, () -> {
             economyManager.getBackend().reloadTopPlayerBalances();
